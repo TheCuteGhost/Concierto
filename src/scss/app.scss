@@ -1,5 +1,6 @@
-$rojo: pink;
+// @import 'bases/variables'; //Sintaxis vieja
+// @import 'contenido/contenido';
 
-body {
-    background-color: $rojo;
-}
+//sintaxis nueva
+@use 'bases';
+@use 'contenido';
