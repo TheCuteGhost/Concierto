@@ -1,25 +1,25 @@
 @use 'variables' as v;
 
 @mixin telefono {
-    @media (min-with: 480px) {
+    @media (min-with: v.$telefono) {
         @content;
     }
 }
 
 @mixin tablet{
-    @media (min-with: 768px) {
+    @media (min-with: v.$tablet) {
         @content;
     }
 }
 
 @mixin desktop{
-    @media (min-with: 992px) {
+    @media (min-with: v.$desktop) {
         @content;
     }
 }
 
-@mixin desktoXL{
-    @media (min-with: 1200px) {
+@mixin desktopXL{
+    @media (min-with: v.$desktopXL) {
         @content;
     }
 }
