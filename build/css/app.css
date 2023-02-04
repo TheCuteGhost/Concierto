@@ -339,7 +339,7 @@ a {
 }
 
 h1, h2, h3 {
-  margin: 0 0 5ren 0;
+  margin: 0 0 5rem 0;
 }
 
 h1 {
@@ -347,7 +347,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3.6;
+  font-size: 3.6rem;
 }
 
 h3 {
@@ -359,6 +359,21 @@ h3 {
 }
 .header h1 {
   color: #FFFFFF;
+}
+
+.navegacion-principal a {
+  color: #FFFFFF;
+  font-size: 2.4rem;
+}
+.navegacion-principal a:hover {
+  color: #FEF46D;
+}
+
+.prueba {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  color: blue;
+  letter-spacing: 10px;
 }
 
 /*# sourceMappingURL=app.css.map */
