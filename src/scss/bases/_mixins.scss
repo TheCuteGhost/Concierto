@@ -1,8 +1,25 @@
 @use 'variables' as v;
 
-@mixin heading($color: blue) {
-    text-transform: uppercase;
-    font-size: 2.4rem;
-    color: $color;
-    letter-spacing: 10px;
+@mixin telefono {
+    @media (min-with: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (min-with: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (min-with: 992px) {
+        @content;
+    }
+}
+
+@mixin desktoXL{
+    @media (min-with: 1200px) {
+        @content;
+    }
 }
