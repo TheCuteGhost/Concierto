@@ -7,6 +7,7 @@ const gulp = require('gulp-plumber');
 // Imagenes
 const cache = require('gulp-cache');
 const imagemin = require('gulp-imagemin');
+const avif = require('gulp-avif');
 const webp = require('gulp-webp');
 
 function css (end) {
@@ -25,6 +26,17 @@ function imagenes(end) {
     }
     src('src/img/**/*.{png,jpg}')
         .pipe(cache(imagemin(opciones)))
+        .pipe(dest('build/img'))
+    end();
+}
+
+function Avif(end) {
+    const opciones = {
+        quality: 50
+    };
+
+    src('src/img/**/*.{png,jpg}')
+        .pipe(webp(opciones))
         .pipe(dest('build/img'))
     end();
 }
@@ -48,6 +60,7 @@ function dev (end) {
 
 exports.css = css;  
 exports.Webp = Webp;
+exports.Avif = Avif;
 exports.imagenes = imagenes;
-exports.dev = parallel(imagenes, Webp, dev); 
+exports.dev = parallel(Avif,imagenes, Webp, dev); 
 
