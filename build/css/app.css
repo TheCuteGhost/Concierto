@@ -358,6 +358,8 @@ h3 {
 img {
   max-width: 100%;
   display: block;
+  height: auto;
+  width: 100%;
 }
 
 .header {
