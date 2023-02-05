@@ -8,7 +8,8 @@
     "css": "gulp css",
     "dev": "gulp dev",
     "webp": "gulp Webp",
-    "ima": "gulp imagenes"
+    "ima": "gulp imagenes",
+    "avif": "gulp Avif"
   },
   "repository": {
     "type": "git",

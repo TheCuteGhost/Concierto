@@ -36,7 +36,7 @@ function Avif(end) {
     };
 
     src('src/img/**/*.{png,jpg}')
-        .pipe(webp(opciones))
+        .pipe(avif(opciones))
         .pipe(dest('build/img'))
     end();
 }
@@ -62,5 +62,5 @@ exports.css = css;
 exports.Webp = Webp;
 exports.Avif = Avif;
 exports.imagenes = imagenes;
-exports.dev = parallel(Avif,imagenes, Webp, dev); 
+exports.dev = parallel(imagenes, Webp, Avif, dev); 
 
