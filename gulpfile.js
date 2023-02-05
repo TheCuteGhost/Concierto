@@ -51,16 +51,25 @@ function Webp(end) {
         .pipe(dest('build/img'))
     end();
 }
+function js (end) {
+    src('src/js/**/*.js')
+        .pipe(dest('build/js'))
+    end();
+}
+
 
 function dev (end) {
     watch("src/scss/**/*.scss", css);
+    watch("src/js/**/*.js", js);
 
     end();
 }
 
+
 exports.css = css;  
+exports.js = js;  
 exports.Webp = Webp;
 exports.Avif = Avif;
 exports.imagenes = imagenes;
-exports.dev = parallel(imagenes, Webp, Avif, dev); 
+exports.dev = parallel(imagenes, Webp, Avif, js, dev); 
 
