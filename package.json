@@ -6,7 +6,9 @@
   "scripts": {
     "sass": "sass --watch src/scss:build/css",
     "css": "gulp css",
-    "dev": "gulp dev"
+    "dev": "gulp dev",
+    "webp": "gulp Webp",
+    "ima": "gulp imagenes"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,8 @@
   "homepage": "https://github.com/TheCuteGhost/Concierto#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-cache": "^1.1.3",
+    "gulp-imagemin": "^7.1.0",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^5.1.0",
     "gulp-webp": "^4.0.1",
