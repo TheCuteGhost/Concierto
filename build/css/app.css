@@ -401,16 +401,49 @@ h3 {
 
 .video {
   position: relative;
+  max-height: 70rem;
+  min-height: 50rem;
+  overflow: hidden;
 }
 .video .overlay {
   position: absolute;
-  background: rgb(238, 174, 202);
-  background: linear-gradient(90deg, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%);
-  height: 100%;
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#891c1e+0,9e37f2+67,ffffff+100&0.8+0,0.5+100 */
+  background: -moz-linear-gradient(-45deg, rgba(137, 28, 30, 0.8) 0%, rgba(158, 55, 242, 0.6) 67%, rgba(255, 255, 255, 0.5) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(137, 28, 30, 0.8) 0%, rgba(158, 55, 242, 0.6) 67%, rgba(255, 255, 255, 0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(137, 28, 30, 0.8) 0%, rgba(158, 55, 242, 0.6) 67%, rgba(255, 255, 255, 0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#cc891c1e", endColorstr="#80ffffff",GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 .video video {
-  width: 100%;
+  display: block;
+  width: auto;
+}
+@media (min-width: 992px) {
+  .video video {
+    width: 100%;
+  }
+}
+
+.contenido-video {
+  z-index: 10;
+}
+.contenido-video h2 {
+  color: #FFFFFF;
+  font-size: 7rem;
+  margin: 0;
+}
+.contenido-video p {
+  background-color: #F53756;
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin: 0;
 }
 
 /*# sourceMappingURL=app.css.map */
