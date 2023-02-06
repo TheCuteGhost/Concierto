@@ -4,6 +4,7 @@ html {
     font-size: 62.5%;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    scroll-padding-top: 0rem;
 }
 
 *,
@@ -18,6 +19,9 @@ body {
 
     &.fijar-body {
         overflow: hidden;
+    }
+    &.body-scroll {
+        scroll-behavior: 8.6rem;
     }
 }
 

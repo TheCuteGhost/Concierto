@@ -311,6 +311,7 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  scroll-padding-top: 0rem;
 }
 
 *,
@@ -325,6 +326,9 @@ body {
 }
 body.fijar-body {
   overflow: hidden;
+}
+body.body-scroll {
+  scroll-behavior: 8.6rem;
 }
 
 p {
@@ -368,6 +372,15 @@ img {
 
 .header {
   background-color: #4cb8b3;
+}
+@media (min-width: 768px) {
+  .header.fijo {
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0.1rem 0.2rem 0.3rem #333;
+  }
 }
 .header h1 {
   color: #FFFFFF;
