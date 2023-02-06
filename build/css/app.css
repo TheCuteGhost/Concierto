@@ -310,6 +310,7 @@ template {
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -561,7 +562,7 @@ img {
 }
 
 .galeria {
-  padding: 3rem 3rem;
+  padding: 2rem;
 }
 .galeria h3 {
   text-align: center;
