@@ -689,4 +689,14 @@ img {
   font-weight: 700;
 }
 
+.site-footer {
+  background-color: #F53756;
+  padding: 1rem;
+}
+.site-footer p {
+  margin: 0;
+  text-align: center;
+  color: #FFFFFF;
+}
+
 /*# sourceMappingURL=app.css.map */
