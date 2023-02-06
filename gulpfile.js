@@ -14,6 +14,9 @@ const imagemin = require('gulp-imagemin');
 const avif = require('gulp-avif');
 const webp = require('gulp-webp');
 
+// JavaScript
+const terser = require('gulp-terser-js');
+
 function css (end) {
 
     src('src/scss/**/*.scss')
@@ -60,6 +63,9 @@ function Webp(end) {
 }
 function js (end) {
     src('src/js/**/*.js')
+        .pipe(sourcemaps.init())
+        .pipe(terser())
+        .pipe(sourcemaps.write('.'))
         .pipe(dest('build/js'))
     end();
 }
