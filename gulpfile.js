@@ -1,8 +1,12 @@
 const {src, dest, watch, parallel} = require("gulp"); 
 
 // CSS
+const plumber = require('gulp-plumber');
 const sass = require("gulp-sass")(require("sass"));
-const gulp = require('gulp-plumber');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const postcss = require('gulp-postcss');
+const sourcemaps =require('gulp-sourcemaps')
 
 // Imagenes
 const cache = require('gulp-cache');
@@ -12,10 +16,13 @@ const webp = require('gulp-webp');
 
 function css (end) {
 
-    src('../src/**/*.scss')
+    src('src/scss/**/*.scss')
+        .pipe(sourcemaps.init())
         .pipe(plumber())
         .pipe(sass())
-        .pipe(dest("build/css")) //Pipe es para que se haga una fucion dentro de los parentecis. Podemos añadir más pipe para que se vuelva a repetir
+        .pipe(postcss([autoprefixer(), cssnano()]))
+        .pipe(sourcemaps.write('.'))
+        .pipe(dest('build/css')) //Pipe es para que se haga una fucion dentro de los parentecis. Podemos añadir más pipe para que se vuelva a repetir
 
     end(); //Callback que le avisa a gulp cuando acaba la función
 }
